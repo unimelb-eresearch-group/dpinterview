@@ -1,0 +1,18 @@
+amends "@pkl.github.dependabotManagedActions/DependabotManagedActions.pkl"
+
+workflows {}
+
+dependabot {
+  updates {
+    new {
+      `package-ecosystem` = "uv"
+      directory = "/"
+      schedule {
+        interval = "weekly"
+      }
+      cooldown {
+        `default-days` = 7
+      }
+    }
+  }
+}

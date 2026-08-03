@@ -1,0 +1,10 @@
+[tools]
+pkl = "0.32.1"
+uv = "0.12.0"
+
+[tasks."update:workflows"]
+run = "pkl project resolve .github/"
+
+[tasks."generate:workflows"]
+depends = ["update:workflows"]
+run = "pkl eval -m .github/   --project-dir .github/ .github/index.pkl"
